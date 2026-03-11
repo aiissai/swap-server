@@ -1,0 +1,16 @@
+json{
+  "name": "swap-server",
+  "version": "1.0.0",
+  "description": "Swap Path Finder shared database server",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": "18.x"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "better-sqlite3": "^9.4.3"
+  }
+}
