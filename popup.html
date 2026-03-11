@@ -1,0 +1,84 @@
+html<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      width: 340px;
+      font-family: Arial, sans-serif;
+      padding: 8px;
+      font-size: 13px;
+    }
+
+    .section-label {
+      font-size: 11px;
+      color: #888;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin: 10px 0 4px 0;
+    }
+
+    button {
+      width: 100%;
+      margin-bottom: 6px;
+      padding: 7px 10px;
+      cursor: pointer;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      background: #f5f5f5;
+      text-align: left;
+      font-size: 13px;
+    }
+
+    button:hover {
+      background: #e8e8e8;
+    }
+
+    button.active {
+      background: #d4edda;
+      border-color: #28a745;
+      color: #155724;
+    }
+
+    button.highlight {
+      background: #fff3cd;
+      border-color: #ffc107;
+      font-weight: bold;
+    }
+
+    #status {
+      white-space: pre-wrap;
+      margin-top: 10px;
+      font-size: 12px;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+
+<body>
+
+ <div class="section-label">Scanning</div>
+  <button id="togglePassive">Passive Scan: OFF</button>
+  <button id="scan">Scan This Page</button>
+  <button id="collectLinks">Collect Results Links</button>
+  <button id="scanNextQueue">Scan Next Queued Link</button>
+  <button id="scanAllQueue" class="highlight">▶ Scan All Queue</button>
+  <button id="stopScan" style="display:none; background:#f8d7da; border-color:#dc3545; color:#721c24;">⏹ Stop Scanning</button>
+
+  <div class="section-label">View Data</div>
+  <button id="viewQueue">View Link Queue</button>
+  <button id="viewRoutes">View Outbound Routes</button>
+  <button id="view">View All Saved (Raw)</button>
+
+  <div class="section-label">Analysis</div>
+  <button id="findChains" class="highlight">🔁 Find Swap Chains</button>
+
+  <div class="section-label">Manage</div>
+  <button id="clear">Clear All Saved Data</button>
+
+  <div id="status">Ready</div>
+
+  <script src="popup.js"></script>
+
+</body>
+</html>
